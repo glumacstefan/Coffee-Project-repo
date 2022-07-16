@@ -11,10 +11,11 @@ html {
     background-color:#181818;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
+body {                      
+    font-family: 'Montserrat', sans-serif;          /* STAVITI OPACITY NA PARAGRAFE */
+    font-size: 9px;
     font-weight: 400;
+    text-shadow: 4px 4px 4px black;
     background-color: #181818;
     color: #fff;
     min-height: 100vh;
@@ -26,6 +27,14 @@ body {
 a {
     text-decoration: none;
     color: #fff;
+}
+
+li {
+    opacity: .9;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* OBJECTS */
@@ -49,13 +58,6 @@ a {
     color: #fff;
 }
 
-.o-section__text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0 60px;
-}
-
 .o-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -64,9 +66,10 @@ a {
 
 .o-grid__cell--centered {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
+
 
 .o-list--bare {
     list-style: none;
@@ -89,6 +92,10 @@ a {
     justify-content: space-between; 
 }
 
+.o-row--centered {
+    align-items: center;
+}
+
 .o-wrapper {
     padding: 0 40px;
 }
@@ -102,6 +109,10 @@ a {
     height: 100%;
 }
 
+.video-layer {
+    opacity: .8;
+}
+
 .bg-video {
     max-width: 800px;
     width: 100%;
@@ -109,19 +120,70 @@ a {
     object-fit: cover;
 }
 
-nav {
+.c-nav {
     background-color: transparent;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     position: absolute;
     top: 0;
+    padding: 15px 40px;
 }
 
 nav a {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.c-nav__links {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    opacity: .9;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s; 
+    z-index: 1;
+}
+
+.c-nav__links li {
+    margin: 16px 0;
+}
+
+.c-nav__links.active {
+    left: 0;
+}
+
+.c-hamburger {
+    cursor: pointer;
+    display: block;
+    z-index: 99;
+}
+
+.c-hamburger.active .c-hamburger__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.c-hamburger.active .c-hamburger__bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);    
+}
+
+.c-hamburger.active .c-hamburger__bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);   
+}
+
+.c-hamburger__bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 .logo-container {
@@ -147,32 +209,32 @@ img {
 }
 
 .c-card {
-    padding: 20px;
+    padding: 15px;
 }
 
 .c-card__num {
-    font-size: 43px;
+    font-size: 35px;
 }
 
 .c-card__num span {
-    font-size: 30px;
+    font-size: 25px;
 }
 
+.c-card--centered {
+    text-align: center;
+}
 
 .grid-item-moved {
     text-align: center;
 }
 
-.c-consumption {    
-    margin: 50px;
-}
-
 .c-consumption__title {
-    margin-bottom: 40px;
-    font-size: 25px;
+    font-size: 25px;  
+    font-weight: 500;
+    margin: 60px 40px;
 }
 
-.c-consumption-container {
+.c-consumption__body {
     width: 50%;
 }
 
@@ -182,35 +244,49 @@ img {
 }
 
 .c-coffee-history {
-    text-align: justify;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    padding: 0 60px;
 }
 
 .c-coffee-history__title {
     font-size: 80px;
+    font-weight: 800;
     color: #D3C1A6;
-    opacity: .8;
+    opacity: .6;
+    margin-bottom: 20px;
+    text-shadow: 9px 8px 15px black;
 }
 
 .c-coffee-history__body {
-    font-size: 9px;
+    margin: 0 35px; 
+    font-size: 8px;
+    text-align: justify;
+    line-height: 13px;
+    opacity: 1;
 }
 
 .c-production-shop {
     text-align: center;
-    padding: 60px;
+    padding: 60px 40px; 
 }
 
 .c-production-shop__title {
     color: #D3C1A6;
     font-size: 40px;
+    font-weight: 800;
+    opacity: .5;
+    text-shadow: 9px 8px 15px black;
 }
 
 .c-production-shop__text {
     margin-top: 20px;
+    line-height: 13px;
 }
 
 .c-production-process {
-    max-width: 50%;
+    width: 200px;
     margin-top: 60px;
 }
 
@@ -229,42 +305,52 @@ img {
     width: 1px;
     background-color: #fff;
     top: 7%;
-    bottom: 6%;
+    bottom: 7%;
     left: 50%;
 }
 
-.c-timeline__item {
+.c-timeline__text {
     position: relative; 
     text-align: end;
+    margin-right: 30px;
   }
   
   .c-timeline  img {
     width: 100px;
+    margin-left: 30px;
   }
   
-  .c-timeline__item::after {
+  .c-timeline__text::after {
     content: '';
     position: absolute;
-    width: 7px;
-    height: 7px;
-    left: 175px;
+    width: 5px;
+    height: 5px;
+    left: 97px;
+    top: 2px;
     background-color: #181818;
     border: 1px solid #fff;
-    border-radius: 50%;
+    border-radius: 50%; 
     z-index: 1;
   }
 
 .c-shop {
-    text-align: center;
+    text-align: center; 
+    margin: 15px;
 }
 
-.c-shop-card {
-    margin: 30px 7px;
-    max-width: 400px; 
+.c-shop-card { 
+    margin: 15px 5px;
+    transition: transform .2s;
 }
 
 .c-shop-card__img {
     background-color: #fff;
+    transition: transform .2s;
+}
+
+.c-shop-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .c-shop-card__body {
@@ -278,18 +364,19 @@ img {
 }
 
 .c-coffee-price {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
 }
 
 .c-coffee-price span {
-    font-size: 1rem;
-    vertical-align: top;
+    font-size: 14px;
+    vertical-align: text-top;
 }
 
 .c-footer {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 50vh;
 }
 
@@ -307,15 +394,22 @@ img {
 
 .c-footer--top h5 {
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .c-footer--bottom {
-    padding: 20px;  
+    padding: 10px;  
     margin-top: 50px;
+    margin-bottom: 10px;
 }
 
+.c-footer--bottom > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
 
 .o-form {
     text-align: end;
@@ -324,10 +418,12 @@ img {
 .o-form input {
     width: 100%;
     padding: 7px;
-    margin-top: 20px;
+    margin-top: 15px;
     background-color: #181818;
     border: 1px solid #fff;
-    font-size: 10px;    
+    font-size: 10px; 
+    border-radius: 2px;
+    color: #fff;   
 }
 
 .o-form button {
@@ -337,6 +433,21 @@ img {
     border-radius: 2px;
     background-color: #fff;
     padding: 7px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
+.underline::after {
+    content: '';
+    width: 20px;
+    background-color: #fff;
+    height: 1px;
+    color: #fff;
+    display: block;
+    position: relative;
+    top: -4px;
+    margin-bottom: 7px;
+}
+
+.underline--diversed::after {
+    left: 24px;
+}

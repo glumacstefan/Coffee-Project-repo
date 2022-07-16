@@ -20,17 +20,30 @@
 							<source src="Videos/pexels-tp-motion-8546328.mp4" type="video/mp4">		
 						 </video>
 					</div>
-            	<nav class="o-wrapper">
+            	<nav class="o-row o-row--justified c-nav">
             	 <div class="logo-container">
             	    <img src="Images/logo.png" class="logo">
             	 </div>
             	 <div>
-					<ul class="o-list o-list--bare">
-						<li><a href="#">home</a></li>
-						<li><a href="#">about</a></li>
-						<li><a href="#">production</a></li>
-						<li><a href="#">shop</a></li>
+					<ul class="o-list o-list--bare c-nav__links">
+						<li>
+							<a href="#">home</a>
+						</li>
+						<li>
+							<a href="#">about</a>
+						</li>
+						<li>
+							<a href="#">production</a>
+						</li>
+						<li>
+							<a href="#">shop</a> 
+						</li>
 					</ul>
+				</div>
+				<div class="c-hamburger">
+					<span class="c-hamburger__bar"></span>
+					<span class="c-hamburger__bar"></span>
+					<span class="c-hamburger__bar"></span>
 				</div>
             	</nav>
 					<div class="header-quote">
@@ -43,47 +56,45 @@
 						<section>
 						<div class="o-section">
 							<div class="c-consumption">
-							<div class="o-section__title c-consumption__title">
-								<h1>Coffee Consumption by Type of Coffee</h1>
-							</div>
-							<div class="o-grid c-consumption-container">
-								<div>
-									<div class="o-grid__cell c-card c-card--aligned">
-										<p class="c-card__num">5<span>%</span></p>		<!-- STAVITI RPVI BROJ U SPAN PA UNDERLINE-->
-										<p>Instant</p>
+								<h1 class="o-section__title c-consumption__title">Coffee Consumption by Type of Coffee</h1>
+								<div class="o-grid c-consumption__body">
+									<div class="o-grid__cell">
+										<div class="c-card c-card--centered">
+											<p class="c-card__num underline underline--diversed">5<span>%</span></p>		<!-- STAVITI RPVI BROJ U SPAN PA UNDERLINE-->
+											<p>Instant</p>
+										</div>
+									</div>
+									<div class="o-grid__cell">
+										<div class="c-card">
+											<p class="c-card__num underline">10<span>%</span></p>
+											<p>Decaf</p>
+										</div>
+									</div>
+									<div class="o-grid__cell">
+										<div class="c-card">
+											<p class="c-card__num underline">11<span>%</span></p>
+											<p>Non-espresso based beverages</p>
+										</div>
+									</div>
+									<div class="o-grid__cell">
+										<div class="c-card">
+											<p class="c-card__num underline">24<span>%</span></p>
+											<p>Espresso based beverages</p>
+										</div>
+									</div>
+									<div class="o-grid__cell">
+										<div class="c-card">
+											<p class="c-card__num underline">34<span>%</span></p>
+											<p>Espresso based beverages</p>
+										</div>
+									</div>
+									<div class="o-grid__cell">
+										<div class="c-card">
+											<p class="c-card__num underline">44<span>%</span></p>
+											<p>Traditional coffee</p>
+										</div>
 									</div>
 								</div>
-								<div>
-									<div class="o-grid__cell c-card">
-										<p class="c-card__num">10<span>%</span></p>
-										<p>Decaf</p>
-									</div>
-								</div>
-								<div>
-									<div class="o-grid__cell c-card c-card--flexed">
-										<p class="c-card__num">11<span>%</span></p>
-										<p>Non-espresso based beverages</p>
-									</div>
-								</div>
-								<div>
-									<div class="o-grid__cell c-card">
-										<p class="c-card__num">24<span>%</span></p>
-										<p>Espresso based beverages</p>
-									</div>
-								</div>
-								<div>
-									<div class="o-grid__cell c-card">
-										<p class="c-card__num">34<span>%</span></p>
-										<p>Espresso based beverages</p>
-									</div>
-								</div>
-								<div>
-									<div class="o-grid__cell c-card">
-										<p class="c-card__num">44<span>%</span></p>
-										<p>Traditional coffee</p>
-									</div>
-								</div>
-							</div>
 							</div>
 							<div class="c-consumption__img">
 								<img src="Images/slika-kafe 2.png">
@@ -93,14 +104,16 @@
 						<section>
 							<div class="o-section">
 								<div class="video-container">
-									<video class="bg-video header-bg-video" autoplay loop muted poster="Images/history.png">
-										<source src="Videos/Coffee Video.mov" type="video/mp4">		
-									</video>
+									<div class="video-layer">
+										<video class="bg-video header-bg-video" autoplay loop muted poster="Images/history.png">
+											<source src="Videos/Coffee Video.mov" type="video/mp4">		
+										</video>
+									</div>
 									<div class="o-section__text c-coffee-history">
 										<h2 class="o-section__title c-coffee-history__title">coffee</h2>
 										<div class="c-coffee-history__body">
-											<p>Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain flowering plants in the Coffea genus. From the coffee fruit, the seeds are separated to produce a stable, raw product: unroasted green coffee. The seeds are then roasted, a process which transforms them into a consumable product: roasted coffee, which is ground into fine particles that are typically steeped in hot water before being filtered out, producing a cup of coffee.
-											Coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content. It is one of the most popular drinks in the world[4] and can be prepared and presented in a variety of ways (e.g., espresso, French press, caffè latte, or already-brewed canned coffee). It is usually served hot, although chilled or iced coffee is common. Sugar, sugar substitutes, milk or cream are often used to lessen the bitter taste or enhance the flavor.</p>
+											<p>Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain flowering plants in the Coffea genus. From the coffee fruit, the seeds are separated to produce a stable, raw product: unroasted green coffee. The seeds are then roasted, a process which transforms them into a consumable product: roasted coffee, which is ground into fine particles that are typically steeped in hot water before being filtered out, producing a cup of coffee.</p><br>
+											<p>Coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content. It is one of the most popular drinks in the world[4] and can be prepared and presented in a variety of ways (e.g., espresso, French press, caffè latte, or already-brewed canned coffee). It is usually served hot, although chilled or iced coffee is common. Sugar, sugar substitutes, milk or cream are often used to lessen the bitter taste or enhance the flavor.</p>
 										</div>
 									</div>
 								</div>
@@ -109,9 +122,11 @@
 						<section>
 							<div class="o-section">
 								<div class="video-container">
-									<video class="bg-video header-bg-video" autoplay loop muted poster="Images/history.png">
-										<source src="Videos/History Video.mov" type="video/mp4">		
-									</video>
+									<div class="video-layer">
+										<video class="bg-video header-bg-video" autoplay loop muted poster="Images/history.png">
+											<source src="Videos/History Video.mov" type="video/mp4">		
+										</video>
+									</div>
 									<div class="o-section__text c-coffee-history">
 										<h2 class="o-section__title c-coffee-history__title">history</h2>
 										<div class="c-coffee-history__body">
@@ -129,44 +144,44 @@
 									<p class="c-production-shop__text">Coffee production is the industrial process of converting the raw fruit of the coffee plant into the finished coffee. The coffee cherry has the fruit or pulp removed leaving the seed or bean which is then dried. While all green coffee is processed, the method that is used varies and can have a significant effect on the flavor of roasted and brewed coffee. Coffee production is a major source of income for 12.5 million households, most in developing countries.</p>
 								</div>
 								<div class="o-grid c-production-process c-timeline">
-									<div class="o-grid__cell--centered c-timeline__item">
-										<p>Processing</p>
+									<div class="o-grid__cell--centered">
+										<p class="c-timeline__text">Processing</p>
 									</div>
 									<div class="o-grid__cell--centered">
 										<img src="Images/coffee production-01.png" class="c-production-process__img">
 									</div>
-									<div class="o-grid__cell--centered c-timeline__item">
-										<p>Roasting</p>
+									<div class="o-grid__cell--centered">
+										<p class="c-timeline__text">Roasting</p>
 									</div>
 									<div class="o-grid__cell--centered">
 										<img src="images/coffee production-02.png">
 									</div>
-									<div class="o-grid__cell--centered c-timeline__item">
-										<p>Grading roasted beans</p>
+									<div class="o-grid__cell--centered">
+										<p class="c-timeline__text">Grading roasted beans</p>
 									</div>	
 									<div class="o-grid__cell--centered">
 										<img src="Images/coffee production-03.png">
 									</div>
-									<div class="o-grid__cell--centered c-timeline__item">
-										<p>Decaffeination</p>
+									<div class="o-grid__cell--centered">
+										<p class="c-timeline__text">Decaffeination</p>
 									</div>
 									<div class="o-grid__cell--centered">
 										<img src="images/coffee production-04.png">
 									</div>
-									<div class="o-grid__cell--centered c-timeline__item">
-										<p>Storage</p>
+									<div class="o-grid__cell--centered">
+										<p class="c-timeline__text">Storage</p>
 									</div>
 									<div class="o-grid__cell--centered">
 										<img src="images/coffee production-05.png">
 									</div>
-									<div class="o-grid__cell--centered c-timeline__item">
-										<p>Brewing</p>
+									<div class="o-grid__cell--centered">
+										<p class="c-timeline__text">Brewing</p>
 									</div>
 									<div class="o-grid__cell--centered">
 										<img src="images/coffee production-06.png">
 									</div>
-									<div class="o-grid__cell--centered c-timeline__item">
-										<p>Serving</p>
+									<div class="o-grid__cell--centered">
+										<p class="c-timeline__text">Serving</p>
 									</div>
 									<div class="o-grid__cell--centered">
 										<img src="images/coffee production-07.png">
@@ -185,7 +200,7 @@
 										<div class="c-shop-card__img">
 											<img src="Images/1-01.png">
 										</div>
-										<div class="o-row o-row--justified c-shop-card__body">
+										<div class="o-row o-row--justified o-row--centered c-shop-card__body">
 											<div>
 												<h4>Capuccino</h4>
 												<p>Lorem ipsum</p>
@@ -280,6 +295,7 @@
 						</footer>
 					</article>
 				</main>
-        </div>  
+        </div>
+		<script src="script.js"></script>
     </body>
 </html>
