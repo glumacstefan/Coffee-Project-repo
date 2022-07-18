@@ -4,25 +4,23 @@
     box-sizing: border-box;
   }
 
+  @media only screen and (max-width: 600px)  {
+
 html {
     line-height: 1.3;
     overflow-y: scroll;
-    height: 100%;
     background-color:#181818;
 }
 
 body {                      
     font-family: 'Montserrat', sans-serif;          /* STAVITI OPACITY NA PARAGRAFE */
-    font-size: 9px;
     font-weight: 400;
     text-shadow: 4px 4px 4px black;
     background-color: #181818;
     color: #fff;
-    min-height: 100vh;
-    max-width: 480px;
-    margin: 0 auto;
     overflow: hidden;
 }
+
 
 a {
     text-decoration: none;
@@ -40,8 +38,8 @@ button:hover {
 /* OBJECTS */
 
 .o-section {
-    position: relative;
     height: 100vh;
+    position: relative;
     border: 1px solid salmon;
 }
 
@@ -59,9 +57,14 @@ button:hover {
 }
 
 .o-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    margin: 0 auto;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.o-grid__cell {
+    flex: 50%;
+    min-width: n5
 }
 
 .o-grid__cell--centered {
@@ -69,7 +72,6 @@ button:hover {
     flex-direction: column;
     justify-content: center;
 }
-
 
 .o-list--bare {
     list-style: none;
@@ -114,7 +116,6 @@ button:hover {
 }
 
 .bg-video {
-    max-width: 800px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -128,7 +129,7 @@ button:hover {
     padding: 15px 40px;
 }
 
-nav a {
+.c-nav a {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -214,10 +215,15 @@ img {
 
 .c-card__num {
     font-size: 35px;
+    font-weight: 300;
 }
 
 .c-card__num span {
     font-size: 25px;
+}
+
+.c-card__text {
+    font-size: 0.80rem;
 }
 
 .c-card--centered {
@@ -228,21 +234,43 @@ img {
     text-align: center;
 }
 
+.c-consumption {
+    overflow: hidden;
+
+}
+
 .c-consumption__title {
     font-size: 25px;  
     font-weight: 500;
-    margin: 60px 40px;
+    margin: 30px 20px;
 }
 
 .c-consumption__body {
-    width: 50%;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .c-consumption__img {
-    position: absolute;
-    bottom: 0;
+    width: 100%;
 }
 
+.underline::after {
+    content: '';
+    width: 25px;
+    background-color: #fff;
+    height: 1px;
+    color: #fff;
+    display: block;
+    position: relative;
+    top: -4px;
+    margin-bottom: 7px;
+}
+
+.underline--diversed::after {
+    left: 38px;
+}
+
+/* 
 .c-coffee-history {
     position: absolute;
     top: 45%;
@@ -450,4 +478,96 @@ img {
 
 .underline--diversed::after {
     left: 24px;
+}
+
+}
+
+
+@media screen and (min-width: 800px) {
+    
+    body {
+        margin: 0 auto;
+        font-size: 18px;
+    }
+
+    .c-hamburger {
+        display: none;
+    }
+
+    .c-nav__links {
+        display: block;
+        position: static;
+        background: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+    }
+
+    .c-nav__links li {
+        margin: 0 20px;
+    }
+
+    .header-quote {
+        top: 90%;
+    }
+
+    .o-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .c-consumption__title {
+        font-size: 30px;
+        margin: 70px 50px;
+    }
+
+    .c-consumption__body {
+        width: 100%;
+        font-size: 10px;
+        margin-top: 150px;
+        padding: 0 50px;
+    }
+
+    .c-card {
+        padding: 15px;
+    }
+    
+    .c-card__num {
+        font-size: 50px;
+    }
+    
+    .c-card__num span {
+        font-size: 25px;
+    }
+
+    .c-consumption__img--small {
+        display: none;
+    }
+
+    .c-consumption__img--large {
+        display: block;
+    }
+
+    .o-flag {
+        display: flex;
+    }
+
+    .o-flag--reverse {
+        flex-direction: row-reverse;
+    }
+
+    .o-flag__img {
+        flex: 1 1 auto;
+        height: 100%;
+        min-width: 400px;
+        width: 100%;
+    }
+
+    .c-coffee-history {
+        position: static;
+    }
+
+    .video-container {
+        margin: 0 80px;
+    }
+
 }
