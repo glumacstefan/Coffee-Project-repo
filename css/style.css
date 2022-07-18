@@ -116,6 +116,8 @@ button:hover {
 .bg-video {
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
     object-fit: cover;
 }
 
@@ -234,7 +236,6 @@ img {
 
 .c-consumption {
     overflow: hidden;
-
 }
 
 .c-consumption__title {
@@ -250,6 +251,10 @@ img {
 
 .c-consumption__img {
     width: 100%;
+}
+
+.c-consumption__img--large {
+    display: none;
 }
 
 .underline::after {
@@ -268,14 +273,13 @@ img {
     left: 38px;
 }
 
-}
 
-/* 
 .c-coffee-history {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
     padding: 0 60px;
+    overflow: hidden;
 }
 
 .c-coffee-history__title {
@@ -294,6 +298,10 @@ img {
     line-height: 13px;
     opacity: 1;
 }
+
+}
+
+/*
 
 .c-production-shop {
     text-align: center;
