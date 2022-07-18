@@ -21,7 +21,6 @@ body {
     overflow: hidden;
 }
 
-
 a {
     text-decoration: none;
     color: #fff;
@@ -63,8 +62,7 @@ button:hover {
 }
 
 .o-grid__cell {
-    flex: 50%;
-    min-width: n5
+    flex: 50% ;
 }
 
 .o-grid__cell--centered {
@@ -268,6 +266,8 @@ img {
 
 .underline--diversed::after {
     left: 38px;
+}
+
 }
 
 /* 
