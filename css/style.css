@@ -681,6 +681,16 @@ img {
         top: -29px;
         z-index: 1; /* POZABAVITI SE HORIZONTALNIM TIMELINEOM */
     } 
+
+    .c-shop {
+        max-width: 100%;
+        flex-wrap: nowrap;
+        margin: 0 50px;
+    }
+
+    .c-shop-card {
+        margin: 0 7px;
+    }
 }
 
 /*
