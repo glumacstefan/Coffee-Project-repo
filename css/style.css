@@ -72,6 +72,11 @@ button:hover {
     justify-content: center;
 }
 
+.o-flag {
+    display: block;
+}
+
+
 .o-list--bare {
     list-style: none;
     color: #fff;
@@ -359,8 +364,6 @@ img {
     text-align: left;  
 }
 
-
-
 .c-timeline::after {
     content: '';
     position: absolute;
@@ -384,12 +387,13 @@ img {
   z-index: 1;
 }
 
-/*
-
 .c-shop {
     text-align: center;
     max-width: 500px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .c-shop-card { 
@@ -402,7 +406,6 @@ img {
 .c-shop-card__img {
     background-color: #fff;
     width: 100%;
-    /* OGRANICITI SIRINU SLIKE NA ODREDJENE PX */
 }
 
 .c-shop-card__img img {
@@ -449,10 +452,6 @@ img {
 
 .c-footer {
     height: 100vh;
-}
-
-.o-flag {
-    display: block;
 }
 
 .slika-kafe {
@@ -602,51 +601,86 @@ img {
         position: static
     }
 
-    .c-production-process {
-        width: auto;
-        margin: 50px 0;
-    }
-
-    .c-production-process__img {
-        max-width: 100%;    
-    }
-
     .flex {
         flex-direction: column-reverse;
     }
 
-    .c-timeline img {
+    .c-production-shop__title {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .c-production-shop__text  {
+        margin: 40px 120px;
+    }
+
+    .c-production {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .c-production-card {
+        flex-direction: column-reverse;
+        flex: 1;
+    }
+
+    .c-production-process__img {
         margin: 0;
+        margin-bottom: 20px;
+        max-width: 80px;
+    }
+
+    .c-production:nth-child(2) {
+        text-align: center;
     }
 
     .c-timeline__text {
-        margin-right: 0;
+        text-align: start;
+        font-size: 10px;
+        margin: 0;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .c-timeline {
+        position: relative;
+        width: 700px;
+    }
+
+    .c-timeline::after {
+        display: none;
+    }
+
+    .c-timeline__text::after {
+        display: none;
     }
 
     .c-timeline::after {
         content: '';
         position: absolute;
         display: inline-block;
-        width: 85%;
+        width: 600px;
         height: 1px;
         background-color: #fff;
-        top: 75%;
-        left: 70px;
+        top: 68.5%;
+        left: 45px;
     }
 
-    .flex::after {
+    .c-timeline__text::after {
         content: '';
-        position: relative;
+        position: absolute;
         display: inline-block;
-        width: 10px;
-        height: 10px;
+        width: 6px;
+        height: 6px;
         background-color: #181818;
-        border: 2px solid #fff;
+        border: 1.5px solid #fff;
         border-radius: 50%;
-        top: 71.5%;
-        left: 50%;
+        left: 38%;
+        top: -29px;
         z-index: 1; /* POZABAVITI SE HORIZONTALNIM TIMELINEOM */
-  } 
+    } 
 }
 
 /*
