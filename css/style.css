@@ -37,9 +37,24 @@ li {
     opacity: .9;
 }
 
+li a:hover {
+    color: #D3C1A6;
+    text-decoration: underline;
+}
+
 button:hover {
     cursor: pointer;
 }
+/**
+.main_container {
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    height: 100vh;
+}  **/
+
+    /** ZBOG OVOGA VRACA NA VRH STRANICE POSLE REFRESH-A **/
+
+
 
 /* OBJECTS */
 
@@ -47,6 +62,8 @@ button:hover {
     height: 100vh;
     position: relative;
     border: 1px solid salmon;
+    scroll-snap-align: start;
+    transition: transform .5s;
 }
 
 .o-section__title {
@@ -91,10 +108,6 @@ button:hover {
     text-align: end;
 }
 
-.o-list--inline {
-    display: flex;
-}
-
 .o-row {
     display: flex;
 }
@@ -105,6 +118,11 @@ button:hover {
 
 .o-row--centered {
     align-items: center;
+    justify-content: center;
+}
+
+.o-row--bottomed {
+    align-items: flex-end;
 }
 
 .o-wrapper {
@@ -220,12 +238,13 @@ button:hover {
 
 .c-consumption {
     overflow: hidden;
+    position: relative;
 }
 
 .c-consumption__title {
     font-size: 23px;  
     font-weight: 500;
-    margin: 20px 30px;
+    margin: 35px 30px;
 }
 
 .c-consumption__body {
@@ -238,34 +257,33 @@ button:hover {
 }
 
 .c-consumption-card__num {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 300;
 }
 
 .c-consumption-card__num span {
-    font-size: 25px;
+    font-size: 40px;
 }
 
-.c-consumption-card__num::after {
-    content: '';
-    width: 25px;
-    background-color: #fff;
-    height: 1px;
-    color: #fff;
-    display: block;
-    position: relative;
-    top: -4px;
-    margin-bottom: 7px;
-}
-
-/* CENTRIRATI OVAJ PSEUDO DA PRATI BROJ !!! */
 .c-consumption-card__num--diversed::after { 
     right: 67%;
     left: 33%;
 }
 
+.c-consumption-card__num::after {
+    content: '';
+    width: 30px;
+    background-color: #fff;
+    height: 1px;
+    color: #fff;
+    display: block;
+    position: relative;
+    top: -5px;
+    margin-bottom: 7px;
+}
+
 .c-consumption-card__text {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .c-consumption-card--centered {
@@ -274,6 +292,8 @@ button:hover {
 
 .c-consumption__img {
     transform: translateY(20px);
+    position: absolute;
+    bottom: 0;
 }
 
 .c-consumption__img img {
@@ -306,6 +326,15 @@ button:hover {
     opacity: .8;
     margin: 0 40px;
     font-size: 13px; /* STAVIO 13px ISKLJUCIVO VIZUELNO, MOZDA PREMALO ZA MOBILNU VERZIJU */
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.c-coffee-title {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.c-history-title {
+    animation: fadeInLeft 1s ease-in-out;
 }
 
 .history-bg-video { 
@@ -319,20 +348,23 @@ button:hover {
 
 .c-production-shop__title {
     color: #D3C1A6;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 800;
     opacity: .5;
     text-shadow: 9px 8px 15px black;
+    margin-top: 20px;
 }
 
 .c-production-shop__text {
-    margin: 20px 0;
     opacity: .8;
+    line-height: normal;
+    margin-top: 10px;
+    padding: 0 10px;
 }
 
 .c-production {
     width: 300px;
-    margin: 10px auto;
+    margin: 25px auto;
 }
 
 .c-production-card {
@@ -372,6 +404,7 @@ button:hover {
     top: 7%;
     bottom: 7%;
     left: 50%;
+    animation: timelineFade 10s ease-in;
 }
 
 .c-timeline__text::after {
@@ -389,11 +422,12 @@ button:hover {
 
 .c-shop {
     text-align: center;
-    max-width: 500px;
+    max-width: 450px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .c-shop-card { 
@@ -438,18 +472,15 @@ button:hover {
     vertical-align: text-top;
 }
 
-.c-footer {
-    height: 100vh;
-}
-
 .c-footer--top__img {
     max-width: 300px;
 }
 
 .c-newsletter {
-    width: 90%;
-    margin: 40px auto;
+    width: 75%;
+    margin: 30px auto;
     font-size: 14px;
+    text-align: center;
 }
 
 .c-footer--top h5 {
@@ -459,17 +490,27 @@ button:hover {
     margin-bottom: 10px;
 }
 
-.c-footer--bottom {
-    padding: 20px;  
-    margin-top: 70px;
-    font-size: 9px;
+.c-social-media {
+    font-size: 30px;
 }
 
+.c-social-media__icon {
+    margin-left: 15px;
+}
+
+.c-footer--bottom {
+    padding: 10px;  
+    margin-top: 33px;
+    font-size: 10px;
+}
+
+/**
 .c-footer--bottom > div {
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
+**/
 
 .o-form input {
     width: 100%;
@@ -491,34 +532,28 @@ button:hover {
     margin-top: 15px;
 }
 
-.c-consumption-card__num::after {
-    content: '';
-    width: 20px;
-    background-color: #fff;
-    height: 1px;
-    color: #fff;
-    display: block;
-    position: relative;
-    top: -4px;
-    margin-bottom: 7px;
-}
-
-.c-consumption-card__num--diversed::after {
-    left: 24px;
-}
-
 .back-to-top i {
     color: #fff;
-    background: #181818;
+    background:#181818;
     font-size: 1rem;
     border: 1px solid #fff;
     border-radius: 50%;
     position: fixed;
     right: 0;
     bottom: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
     padding: 15px;
+}
+
+.back-to-top:hover {
+    cursor: pointer;
+    background: #D3C1A6;
+}
+
+.back-to-top i:hover {
+    border: 2px solid #D3C1A6;
+    color: #D3C1A6;
 }
 
 
@@ -526,13 +561,13 @@ button:hover {
 
     .o-layout--1\/3
     .o-layout__cell {
-        flex: 30%;
-        padding-left: 40px;
+        flex: 33.33%;
+        padding-left: 20px;
     }
     
     .c-consumption__title {
-        margin: 50px;
         font-size: 30px;
+        margin-top: 60px;
     }
 
     .c-consumption__body {
@@ -551,6 +586,10 @@ button:hover {
         left: 0;
     }
 
+    .c-consumption__img {
+        transform: translateY(50px);
+    }
+
     .c-coffee-history__title {
         font-size: 90px;
     }
@@ -559,23 +598,18 @@ button:hover {
         font-size: 16px;
     }
 
+    .c-production {
+        margin-top: 30px;
+    }
+
+    .c-production-shop__title {
+        font-size: 50px;
+    }
+
     .c-production-shop__text {
-        margin: 20px 50px;
+        padding: 0 50px;
     }
 
-    .c-footer--top {
-        display: flex;
-    }
-
-    .c-footer--top__img{
-        max-width: 100%;
-        min-width: 340px;
-    }
-
-    .c-newsletter {
-        align-self: center;
-        transform: translateX(-25%);
-    }
 
     .c-footer--bottom {
         font-size: 14px;
@@ -585,23 +619,39 @@ button:hover {
         right: 0;
     }
 }
-    
+
+@media screen and (min-width: 600px) {
+
+    .c-footer--top {
+        display: flex;
+    }
+
+    .c-social-media {
+        margin-top: 100px;
+    }
+
+    .c-newsletter {
+        align-self: center;
+        transform: translateX(-20%);
+        text-align: left;
+    }
+
+    .c-footer--top__img {
+        max-width: 100%;  
+    }
+
+
+}
 
 
 @media screen and (min-width: 769px) {
     
-    .o-section--narrowed {
-        width: 90%;
-        margin: 0 auto;
-    }
-
     .o-flag {
         display: flex;
         height: 100%;
     }
     
     .o-flag--m {
-        height: 100%;
         margin: 0 auto;
     }
 
@@ -612,6 +662,10 @@ button:hover {
     .o-flag__body {
         flex: 50%;
         height: 100%;
+    }
+
+    .o-list--inline li {
+        display: inline;
     }
 
     .o-layout--row {
@@ -632,38 +686,75 @@ button:hover {
         opacity: 1;
     }
 
+    .c-nav {
+        padding: 15px 0;
+    }
+
+    .c-nav__links {
+        width: 100%;
+    }
+    
+    .c-container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .c-nav__links {
+        position: static;
+        font-size: 14px;
+        flex-direction: row;
+        background: none;
+    }
+
+    .c-nav__links li {
+        margin-left: 50px;
+    }
+
+    .c-hamburger {
+        display: none;
+    }
+
     .c-header-quote {
         top: 85%;
     }
 
     .c-consumption {
         display: block;
-        width: 100%;
     }
 
     .c-consumption__title {
         font-size: 33px;
         margin-top: 90px;
     }
-
+    /* DOSTA DISKUTABILNO, PROMENITI U ZAVISNOSTI OD FONTA */
     .c-consumption__body {
-        width: 100%;
+        width: calc(100% + 5%);
         flex-wrap: nowrap;
-        padding: 40px 50px 0;
-        margin-left: 20px;
+        margin-top: 100px;
+        margin-left: -2%;
+    }
+
+    .c-consumption-card {
+        padding-left: 20px;
     }
 
     .c-consumption-card__num {
         padding: 0;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .c-consumption-card__num span {
-        font-size: 35px;
+        font-size: 50px;
+    }
+
+
+    .c-consumption-card__text{
+        font-size: 11px;
     }
 
     .c-consumption__img {
         margin-top: 70px; 
+        transform: translateY(0);
     }
 
     .c-consumption__img img {
@@ -719,12 +810,12 @@ button:hover {
     }
     
     .c-production-shop__title {
-        font-size: 50px;
-        margin-top: 20px;
+        font-size: 80px;
+        margin-top: 40px;
     }
 
-    .c-production-shop__text  {
-        margin: 40px 120px;
+    .c-production-shop__text {
+        margin-top: 40px;
     }
 
     .c-production {
@@ -742,11 +833,24 @@ button:hover {
     .c-production-process__img {
         margin: 0;
         margin-bottom: 20px;
-        max-width: 80px;
+        max-width: 100px;
     }
 
     .c-production:nth-child(2) {
         text-align: center;
+    }
+
+    .c-shop-card__body--left p {
+        display: block;
+    }
+
+    .c-timeline {
+        position: relative;
+        width: 600px;
+    }
+
+    .c-timeline::after {
+        display: none;
     }
 
     .c-timeline__text {
@@ -757,15 +861,6 @@ button:hover {
         position: relative;
     }
 
-    .c-timeline {
-        position: relative;
-        width: 700px;
-    }
-
-    .c-timeline::after {
-        display: none;
-    }
-
     .c-timeline__text::after {
         display: none;
     }
@@ -774,10 +869,10 @@ button:hover {
         content: '';
         position: absolute;
         display: inline-block;
-        width: 600px;
+        width: 510px;
         height: 1px;
         background-color: #fff;
-        top: 68.5%;
+        top: 69.4%;
         left: 45px;
     }
 
@@ -792,22 +887,86 @@ button:hover {
         border-radius: 50%;
         left: 38%;
         top: -29px;
-        z-index: 1; /* POZABAVITI SE HORIZONTALNIM TIMELINEOM */
+        z-index: 1;
     } 
 
     .c-shop {
         max-width: 100%;
         flex-wrap: nowrap;
-        margin: 0 50px;
     }
 
     .c-shop-card {
         margin: 0 7px;
     }
 
+    .c-footer--top__img {
+        max-width: 600px;
+    }
+
+    .c-footer--bottom {
+        font-size: 10px;
+    }
+
+    .c-social-media {
+        margin-top: 15px;
+    }
+
     .c-newsletter {
         align-self: center;
         transform: translateX(-10%);
+        width: 50%;
+        margin-right: 100px;
+        margin-left: 30px;
+    }
+
+    .c-copyright {
+        display: flex;
+    }
+
+    .c-copyright p {
+        margin-left: 10px;
+    }
+
+    .c-footer__links li {
+        margin-left: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    .c-consumption-card__num {
+        font-size: 50px;
+    }
+
+    .c-consumption-card__num span {
+        font-size: 65px;
+    }
+    .c-timeline {
+        width: 800px;
+    }
+
+    .c-timeline::after {
+        width: 690px;
+        top: 78%;
+        left: 55px;
+    }
+
+    .c-footer--top__img {
+        max-width: 550px;
+    }
+
+    .c-newsletter {
+        width: 30%;
+        margin-left: 150px;
+    }
+
+    .c-social-media {
+        margin-top: 20px;
+    }
+
+    .o-form button {
+        width: 40%;
+
     }
 
 }
@@ -903,3 +1062,87 @@ button:hover {
     }
 
 }
+
+/* ANIMATIONS */
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+  
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+  }
+
+@-webkit-keyframes fadeInLeft {
+    from { 
+        transform: translateX(-300px)
+    }
+
+    to {
+        opacity: .6;
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        transform: translateX(300px)
+    }
+
+    to {
+        opacity: .6
+    }
+}
+
+@-webkit-keyframes timelineFade {
+    from {
+        width: 1%;
+        transform: translateX(0)
+    }
+
+    to {
+        opacity: 1;         /** OVDE PODESITI DA SE KRUZICI AKTIVIRAJU NA KONTAKT SA TIMELINOM **/
+    }                       /** TAKODJE, NAMESTITI NOVU ANIMACIJU ZA MALE EKRANE - VERTIKALNU **/
+}
+
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+  }
+  
+  .animatedFadeInUp {
+    opacity: 0
+  }
+  
+  .fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+  }
+
+  .fadeInLeft {
+    opacity: 0;
+    animation-name: fadeInLeft;
+    -webkit-animation-name: fadeInLeft;
+  }
+
+  .fadeInRight {
+    opacity: 0;
+    animation-name: fadeInRight;
+    -webkit-animation-name: fadeInRight;
+  }
+
+
+  .timelineFade {
+    opacity: 1;
+    animation-name: timelineFade;
+    -webkit-animation-name: timelineFade;
+  }
+
+  
+  
