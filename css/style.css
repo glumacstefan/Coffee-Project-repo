@@ -17,8 +17,8 @@ body {
     text-shadow: 4px 4px 4px black;
     background-color: #181818;
     color: #fff;
-    overflow: hidden;
-}   
+    overflow: hidden;;
+}  
 
 img {
     width: 100%;
@@ -45,12 +45,13 @@ li a:hover {
 button:hover {
     cursor: pointer;
 }
-/**
+
+/** 
 .main_container {
     scroll-snap-type: y mandatory;
-    overflow: scroll;
+    overflow: scroll;       
     height: 100vh;
-}  **/
+} 
 
     /** ZBOG OVOGA VRACA NA VRH STRANICE POSLE REFRESH-A **/
 
@@ -404,7 +405,11 @@ button:hover {
     top: 7%;
     bottom: 7%;
     left: 50%;
-    animation: timelineFade 10s ease-in;
+    animation: timelineFadeVertical;
+    animation-duration: 2.4s;
+    animation-timing-function: linear;
+    ;
+
 }
 
 .c-timeline__text::after {
@@ -874,6 +879,9 @@ button:hover {
         background-color: #fff;
         top: 69.4%;
         left: 45px;
+        animation: timelineFade;
+        animation-duration: 2.4s;
+        animation-timing-function: linear;
     }
 
     .c-timeline__text::after {
@@ -1098,17 +1106,59 @@ button:hover {
 
 @-webkit-keyframes timelineFade {
     from {
-        width: 1%;
+        width: 0;
         transform: translateX(0)
     }
 
     to {
-        opacity: 1;         /** OVDE PODESITI DA SE KRUZICI AKTIVIRAJU NA KONTAKT SA TIMELINOM **/
+        opacity: 1;     
     }                       /** TAKODJE, NAMESTITI NOVU ANIMACIJU ZA MALE EKRANE - VERTIKALNU **/
 }
 
+@-webkit-keyframes timelineFadeVertical {
+    from {
+        height: 1%;
+        transform: translateY(0);
+    }
 
-.animated {
+    to {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes showUp {
+    to {visibility: visible;}
+}
+
+
+  @keyframes showUp1 {
+    to   { visibility: visible; }
+  }
+
+  @keyframes showUp2 {
+    to   { visibility: visible; }
+  }
+
+  @keyframes showUp3 {
+    to   { visibility: visible; }
+  }
+
+  @keyframes showUp4 {
+    to   { visibility: visible; }
+  }
+
+  @keyframes showUp5 {
+    to   { visibility: visible; }
+  }
+
+  @keyframes showUp6 {
+    to   { visibility: visible; }
+  }
+
+
+  .animated {
     animation-duration: 1s;
     animation-fill-mode: both;
     -webkit-animation-duration: 1s;
@@ -1137,12 +1187,51 @@ button:hover {
     -webkit-animation-name: fadeInRight;
   }
 
-
   .timelineFade {
     opacity: 1;
     animation-name: timelineFade;
     -webkit-animation-name: timelineFade;
   }
+
+  .timelineFadeVertical {
+    opacity: 1;
+    animation-name: timelineFadeVertical;
+    -webkit-animation-name: timelineFadeVertical;
+  }
+
+  .showUp1 {
+    animation: showUp1 0s 0.4s forwards;
+    visibility: hidden;
+  }
+
+  .showUp2 {
+    animation: showUp2 0s 0.8s forwards;
+    visibility: hidden;
+  }
+
+  .showUp3 {
+    animation: showUp3 0s 1.2s forwards;
+    visibility: hidden;
+  }
+
+  .showUp4 {
+    animation: showUp4 0s 1.6s forwards;
+    visibility: hidden;
+  }
+
+  .showUp5 {
+    animation: showUp5 0s 2s forwards;
+    visibility: hidden;
+  }
+
+  .showUp6 {
+    animation: showUp6 0s 2.4s forwards;
+    visibility: hidden;
+  }
+
+  
+
+
 
   
   
