@@ -1,3 +1,4 @@
+
 const hamburger = document.querySelector('.c-hamburger');
 const navLinks = document.querySelector('.c-nav__links');
 
@@ -20,7 +21,7 @@ function scrollFunction() {
 
 function topFunction() {
     document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 50;
+    document.documentElement.scrollTop = 0;
 }
 
 jQuery(document).ready(function( $ ) 
@@ -31,4 +32,23 @@ jQuery(document).ready(function( $ )
     });
     });
 
+
+
+
+function animated() {
+    let animation = document.querySelectorAll('.c-coffee-title');
+    for (let i = 0; i < animation.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = animation[i].getBoundingClientRect().top;
+        let elementVisible = 550;
+
+        if (elementTop < windowsHeight - elementVisible) {
+            animation[i].classList.add('active');
+        } else {
+                animation[i].classList.remove('active');
+            }
+        }
+    }
+
+    window.addEventListener("scroll", animated);
 
