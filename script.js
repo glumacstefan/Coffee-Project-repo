@@ -1,6 +1,6 @@
 
-const hamburger = document.querySelector('.c-hamburger');
-const navLinks = document.querySelector('.c-nav__links');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav__links');
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
@@ -36,7 +36,7 @@ jQuery(document).ready(function( $ )
 
 
 function animated() {
-    let animation = document.querySelectorAll('.c-coffee-title');
+    let animation = document.querySelectorAll('.coffee-title');
     for (let i = 0; i < animation.length; i++) {
         let windowHeight = window.innerHeight;
         let elementTop = animation[i].getBoundingClientRect().top;
