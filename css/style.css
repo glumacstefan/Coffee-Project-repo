@@ -543,10 +543,11 @@ header {
 
     .coffee-history__title {
         font-size: 90px;
+        margin-top: 100px;
     }
 
     .coffee-history__body {
-        font-size: 16px;
+        padding: 0 50px;
     }
 
     .production-shop__title {
@@ -576,6 +577,10 @@ header {
 
     .consumption__body {
         margin-top: 80px;
+    }
+
+    .coffee-history__title {
+        font-size: 110px;
     }
 
     .footer--top {
