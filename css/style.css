@@ -384,14 +384,15 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
+    max-width: 500px;
+    margin-top: 20px;
 }
 
 .shop-card { 
     transition: transform .2s;
-    width: 40%;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 46.7%;
+    margin-left: 6px;
+    margin-right: 4px;
 }
 
 .shop-card__img {
@@ -518,6 +519,15 @@ header {
 
 .u-1\/2 {
     width: 50%;
+}
+
+@media screen and (min-width: 339px) {
+
+    .shop-card {
+        margin-top: 40px;
+        padding: 0 2px;
+    }
+
 }
 
 
@@ -761,6 +771,7 @@ header {
 
     .shop-card__body--left p {
         display: block;
+        font-size: 12px;
     }
 
     .timeline {
