@@ -14,12 +14,12 @@
 	<body>
         <div class="fullpage" id="fullpage">
         <!-- HEADER-->
-            <header class="o-row o-row--justified container">
+            <header class="o-row o-row--justified o-wrapper o-wrapper--lg">
 				<div class="logo">
 					<img src="Images/logo.png">
 				</div>
             	<nav class="nav">
-					<ul class="o-list o-list--bare nav__links">
+					<ul class="o-list o-list-bare nav__links">
 						<li class="nav__link">
 							<a href="#">home</a>
 						</li>
@@ -52,230 +52,214 @@
 					<p>“Coffee is a language in itself.”</p>
 				</div>
 			</section>
-			<section>
-				<div class="o-section consumption"> <!-- OVDE ISPRAVITI DA SLIKA BUDE SIRA OD CONTAINERA-->
-					<div class="container">
-						<h2 class="o-section__title consumption__title">Coffee Consumption by Type of Coffee</h2>
-						<div class="o-layout o-layout--1/2 o-layout--1/3 consumption__body">
-							<div class="o-layout__cell">
-								<div class="consumption-card consumption-card--centered">
-									<p class="consumption-card__num consumption-card__num--diversed">
-										<span class="counter">5</span>%
-									</p>
-									<p class="consumption-card__text">Instant</p>
-								</div>
-							</div>
-							<div class="o-layout__cell">
-								<div class="consumption-card">
-									<p class="consumption-card__num">
-										<span class="counter">10</span>%
-									</p>
-									<p class="consumption-card__text">Decaf</p>
-								</div>
-							</div>
-							<div class="o-layout__cell">
-								<div class="consumption-card">
-									<p class="consumption-card__num">
-										<span class="counter">11</span>%
-									</p>
-									<p class="consumption-card__text">Non-espresso based beverages</p>
-								</div>
-							</div>
-							<div class="o-layout__cell">
-								<div class="consumption-card">
-									<p class="consumption-card__num">
-										<span class="counter">24</span>%
-									</p>
-									<p class="consumption-card__text">Espresso based beverages</p>
-								</div>
-							</div>
-							<div class="o-layout__cell">
-								<div class="consumption-card">
-									<p class="consumption-card__num">
-										<span class="counter">34</span>%
-									</p>
-									<p class="consumption-card__text">Espresso based beverages</p>
-								</div>
-							</div>
-							<div class="o-layout__cell">
-								<div class="consumption-card">
-									<p class="consumption-card__num">
-										<span class="counter">44</span>%
-									</p>
-									<p class="consumption-card__text">Traditional coffee</p>
-								</div>
-							</div>
+			<section class="o-section consumption">
+				<div class="o-wrapper o-wrapper--lg">
+					<h2 class="o-section__title consumption__title">Coffee Consumption by Type of Coffee</h2>
+					<div class="o-layout consumption__body">
+						<div class="o-layout__item consumption-card consumption-card--other u-1/2 u-1/3">
+							<p>
+								<span class="counter">5</span>%
+							</p>
+							<span class="consumption-card__underline consumption-card__underline--other"></span>
+							<p class="consumption-card__text">Instant</p>
+						</div>
+						<div class="o-layout__item consumption-card u-1/2 u-1/3">
+							<p>
+								<span class="counter">10</span>%
+							</p>
+							<span class="consumption-card__underline"></span>
+							<p class="consumption-card__text">Decaf</p>
+						</div>
+						<div class="o-layout__item consumption-card u-1/2 u-1/3">
+							<p>
+								<span class="counter">11</span>%
+							</p>
+							<span class="consumption-card__underline"></span>
+							<p class="consumption-card__text">Non-espresso based beverages</p>
+						</div>
+						<div class="o-layout__item consumption-card u-1/2 u-1/3">
+							<p>
+								<span class="counter">24</span>%
+							</p>
+							<span class="consumption-card__underline"></span>
+							<p class="consumption-card__text">Espresso based beverages</p>
+						</div>
+						<div class="o-layout__item consumption-card u-1/2 u-1/3">
+							<p>
+								<span class="counter">34</span>%
+							</p>
+							<span class="consumption-card__underline"></span>
+							<p class="consumption-card__text">Espresso based beverages</p>
+						</div>
+						<div class="o-layout__item consumption-card u-1/2 u-1/3">
+							<p>
+								<span class="counter">44</span>%
+							</p>
+							<span class="consumption-card__underline"></span>
+							<p class="consumption-card__text">Traditional coffee</p>
 						</div>
 					</div>
-						<div class="consumption__img">
-							<img class="consumption__img--small "src="Images/slika-kafe 2.png" alt="">
-							<img class="consumption__img--large" src="Images/slika-kafe.png" alt="">
-						</div>														
 				</div>
+				<div class="consumption__img">
+					<img class="consumption__img--small "src="Images/slika-kafe 2.png" alt="">
+					<img class="consumption__img--large" src="Images/slika-kafe.png" alt="">
+				</div>														
 			</section>
-			<section>
-				<div class="o-section container">
-					<div class="o-flag o-flag--m">
-						<div class="video-layer video-container o-flag__img">
-							<video class="bg-video bg-video--lg" autoplay loop muted poster="Images/history.png">
-								<source src="Videos/Coffee Video.mov" type="video/mp4" class="video">		
-							</video>
-						</div>
-						<div class="o-section__text o-flag__body coffee-history">
-							<h2 class="o-section__title coffee-history__title coffee-title">coffee</h2>
-							<div class="coffee-history__body coffee-text animated animatedFadeInUp fadeInUp">
-								<p>Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain flowering plants in the Coffea genus. From the coffee fruit, the seeds are separated to produce a stable, raw product: unroasted green coffee. The seeds are then roasted, a process which transforms them into a consumable product: roasted coffee, which is ground into fine particles that are typically steeped in hot water before being filtered out, producing a cup of coffee.</p><br>
-								<p>Coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content. It is one of the most popular drinks in the world[4] and can be prepared and presented in a variety of ways (e.g., espresso, French press, caffè latte, or already-brewed canned coffee). It is usually served hot, although chilled or iced coffee is common. Sugar, sugar substitutes, milk or cream are often used to lessen the bitter taste or enhance the flavor.</p>
-							</div>
+			<section class="o-section coffee-history">
+				<div class="o-flag o-wrapper--lg">
+					<div class="o-flag__img video-layer video-container">
+						<video class="bg-video bg-video--lg" autoplay loop muted poster="Images/history.png">
+							<source src="Videos/Coffee Video.mov" type="video/mp4" class="video">		
+						</video>
+					</div>
+					<div class="o-flag__body">
+						<h2 class="o-section__title coffee-history__title coffee-history__title--right">coffee</h2>
+						<div class="coffee-history__body coffee-history__body--right animated animatedFadeInUp fadeInUp">
+							<p>Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain flowering plants in the Coffea genus. From the coffee fruit, the seeds are separated to produce a stable, raw product: unroasted green coffee. The seeds are then roasted, a process which transforms them into a consumable product: roasted coffee, which is ground into fine particles that are typically steeped in hot water before being filtered out, producing a cup of coffee.</p><br>
+							<p>Coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content. It is one of the most popular drinks in the world[4] and can be prepared and presented in a variety of ways (e.g., espresso, French press, caffè latte, or already-brewed canned coffee). It is usually served hot, although chilled or iced coffee is common. Sugar, sugar substitutes, milk or cream are often used to lessen the bitter taste or enhance the flavor.</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section>
-				<div class="o-section container">
-					<div class="o-flag o-flag--m o-flag--reverse">
-						<div class="video-layer video-container history-video-container o-flag__img">
-							<video class="bg-video bg-video--lg history-bg-video" autoplay loop muted poster="Images/history.png">
-								<source src="Videos/History Video.mov" type="video/mp4">		
-							</video>
-						</div>
-						<div class="o-section__text o-flag__body coffee-history reveal">
-							<h2 class="o-section__title coffee-history__title history-title">history</h2>
-							<div class="coffee-history__body history-text animated animatedFadeInUp fadeInUp">
-								<p>The history of coffee begins in the 15th century, when coffee beans were first exported out of Ethiopia to Yemen by Somali merchants. Sufi monasteries in Yemen employed   coffee as an aid to concentration during prayers. It soon spread to Mecca and Medina. By the early 16th century, it had reached the rest of the Middle East, South India  (Karnataka), Persia, Turkey, India, and northern Africa. Coffee then spread to the Balkans, Italy, and to the rest of Europe, as well as Southeast Asia.</p><br>
-            					<p>Numerous legends place the beginning of coffee's history at much earlier dates. According to one legend,ancestors of today's Kafficho people in the Kingdom of Kaffa  (present-dayEthiopia) were the first torecognize the energizing effect of the coffee plant. However, no direct evidence that has been foundearlier than the 15th century, or even wherecoffee was first cultivated. The story of Kaldi, the9th-century Ethiopian goatherd who discovered the stimulating effect of coffee when he noticed how excitedhis goats becameafter eating the beans from a coffee plant, did not appear in writing until 1671 and isprobably apocryphal.</p>
-							</div>
+			<section class="o-section coffee-history">
+				<div class="o-flag o-flag--reverse o-wrapper--lg">
+					<div class="o-flag__img video-layer video-container">
+						<video class="bg-video bg-video--lg" autoplay loop muted poster="Images/history.png">
+							<source src="Videos/History Video.mov" type="video/mp4">		
+						</video>
+					</div>
+					<div class="o-flag__body">
+						<h2 class="o-section__title coffee-history__title coffee-history__title--left">history</h2>
+						<div class="coffee-history__body coffee-history__body--left animated animatedFadeInUp fadeInUp">
+							<p>The history of coffee begins in the 15th century, when coffee beans were first exported out of Ethiopia to Yemen by Somali merchants. Sufi monasteries in Yemen employed   coffee as an aid to concentration during prayers. It soon spread to Mecca and Medina. By the early 16th century, it had reached the rest of the Middle East, South India  (Karnataka), Persia, Turkey, India, and northern Africa. Coffee then spread to the Balkans, Italy, and to the rest of Europe, as well as Southeast Asia.</p><br>
+            				<p>Numerous legends place the beginning of coffee's history at much earlier dates. According to one legend,ancestors of today's Kafficho people in the Kingdom of Kaffa  (present-dayEthiopia) were the first torecognize the energizing effect of the coffee plant. However, no direct evidence that has been foundearlier than the 15th century, or even wherecoffee was first cultivated. The story of Kaldi, the9th-century Ethiopian goatherd who discovered the stimulating effect of coffee when he noticed how excitedhis goats becameafter eating the beans from a coffee plant, did not appear in writing until 1671 and isprobably apocryphal.</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section>
-				<div id="production" class="o-section production-shop container">
-					<div>
-						<h2 class="o-section__title o-section__title--toned production-shop__title">production</h2>
-						<p class="production-shop__text">Coffee production is the industrial process of converting the raw fruit of the coffee plant into the finished coffee. The coffee cherry has the fruit or pulp removed leaving the seed or bean which is then dried. While all green coffee is processed, the method that is used varies and can have a significant effect on the flavor of roasted and brewed coffee. Coffee production is a major source of income for 12.5 million households, most in developing countries.</p>
-					</div>
-					<div class="production timeline"> <!-- namestiti timeline da bude responzivan -->
-						<div class="production-card">
-							<div>
-								<p class="timeline__text">Processing</p>
-							</div>
-							<div>
-								<img src="Images/coffee production-01.png" class="production-process__img">
-							</div>
-						</div>
-						<div class="production-card showUp1">
-							<div>
-								<p class="timeline__text">Roasting</p>
-							</div>
-							<div>
-								<img src="Images/coffee production-02.png" class="production-process__img">
-							</div>
-						</div>
-						<div class="production-card showUp2">
-							<div>
-								<p class="timeline__text">Grading roasted beans</p>
-							</div>
-							<div>
-								<img src="Images/coffee production-03.png" class="production-process__img">
-							</div>
-						</div>
-						<div class="production-card showUp3">
-							<div>
-								<p class="timeline__text">Decaffeination</p>
-							</div>
-							<div>
-								<img src="Images/coffee production-04.png" class="production-process__img">
-							</div>
-						</div>
-						<div class="production-card showUp4">
-							<div>
-								<p class="timeline__text">Storage</p>
-							</div>
-							<div>
-								<img src="Images/coffee production-05.png" class="production-process__img">
-							</div>
-						</div>
-						<div class="production-card showUp5">
-							<div>
-								<p class="timeline__text">Brewing</p>
-							</div>
-							<div>
-								<img src="Images/coffee production-06.png" class="production-process__img">
-							</div>
-						</div>
-						<div class="production-card showUp6">
-							<div>
-								<p class="timeline__text">Serving</p>
-							</div>
-							<div>
-								<img src="Images/coffee production-07.png" class="production-process__img">
-							</div>
-						</div>
-					</div>
+			<section class="o-section o-wrapper o-wrapper--lg">
+				<div>
+					<h2 class="o-section__title production-shop__title">production</h2>
+					<p class="production-shop__text">Coffee production is the industrial process of converting the raw fruit of the coffee plant into the finished coffee. The coffee cherry has the fruit or pulp removed leaving the seed or bean which is then dried. While all green coffee is processed, the method that is used varies and can have a significant effect on the flavor of roasted and brewed coffee. Coffee production is a major source of income for 12.5 million households, most in developing countries.</p>
 				</div>
+				<ul class="production__process timeline"> <!-- namestiti timeline da bude responzivan -->
+					<li class="production-card">
+						<div>
+							<p class="timeline__text">Processing</p>
+						</div>
+						<div>
+							<img src="Images/coffee production-01.png" class="timeline__img">
+						</div>
+					</li>
+					<li class="production-card showUp1">
+						<div>
+							<p class="timeline__text">Roasting</p>
+						</div>
+						<div>
+							<img src="Images/coffee production-02.png" class="timeline__img">
+						</div>
+					</li>
+					<li class="production-card showUp2">
+						<div>
+							<p class="timeline__text">Grading roasted beans</p>
+						</div>
+						<div>
+							<img src="Images/coffee production-03.png" class="timeline__img">
+						</div>
+					</li>
+					<li class="production-card showUp3">
+						<div>
+							<p class="timeline__text">Decaffeination</p>
+						</div>
+						<div>
+							<img src="Images/coffee production-04.png" class="timeline__img">
+						</div>
+					</li>
+					<li class="production-card showUp4">
+						<div>
+							<p class="timeline__text">Storage</p>
+						</div>
+						<div>
+							<img src="Images/coffee production-05.png" class="timeline__img">
+						</div>
+					</li>
+					<li class="production-card showUp5">
+						<div>
+							<p class="timeline__text">Brewing</p>
+						</div>
+						<div>
+							<img src="Images/coffee production-06.png" class="timeline__img">
+						</div>
+					</li>
+					<li class="production-card showUp6">
+						<div>
+							<p class="timeline__text">Serving</p>
+						</div>
+						<div>
+							<img src="Images/coffee production-07.png" class="timeline__img">
+						</div>
+					</li>
+				</ul>
 			</section>
-			<section>
-				<div id="shop" class="o-section production-shop container">
-					<div>
-						<h2 class="o-section__title o-section__title--toned production-shop__title">Shop</h2>
-						<p class="production-shop__text">Explore some of our finest types of coffee</p>
+			<section  class="o-section o-wrapper o-wrapper--lg">
+				<div>
+					<h2 class="o-section__title production-shop__title">Shop</h2>
+					<p class="production-shop__text">Explore some of our finest types of coffee</p>
+				</div>
+				<div class="shop">
+					<div class="shop-card">
+						<div class="shop-card__img">
+							<img src="Images/1-01.png">
+						</div>
+						<div class="o-row o-row--justified shop-card__body">
+							<div class="shop-card__body--left">
+								<h4>Capuccino</h4>
+								<p>Lorem ipsum</p>
+							</div>
+							<div class="coffee-price">
+								<p>1<span>99</span></p>
+							</div>
+						</div>
 					</div>
-					<div class="shop">
-						<div class="shop-card">
-							<div class="shop-card__img">
-								<img src="Images/1-01.png">
+					<div class="shop-card">
+						<div class="shop-card__img">
+							<img src="Images/2-01.png">
+						</div>
+						<div class="o-row o-row--justified shop-card__body">
+							<div class="shop-card__body--left">
+								<h4>Caffè Latte</h4>
+								<p>Lorem ipsum</p>
 							</div>
-							<div class="o-row o-row--justified shop-card__body">
-								<div class="shop-card__body--left">
-									<h4>Capuccino</h4>
-									<p>Lorem ipsum</p>
-								</div>
-								<div class="coffee-price">
-									<p>1<span>99</span></p>
-								</div>
+							<div class="coffee-price">
+								<p>1<span>99</span></p>
 							</div>
 						</div>
-						<div class="shop-card">
-							<div class="shop-card__img">
-								<img src="Images/2-01.png">
+					</div>
+					<div class="shop-card">
+						<div class="shop-card__img">
+							<img src="Images/3-01.png">
+						</div>
+						<div class="o-row o-row--justified shop-card__body">
+							<div class="shop-card__body--left">
+								<h4>White coffee</h4>
+								<p>Lorem ipsum</p>
 							</div>
-							<div class="o-row o-row--justified shop-card__body">
-								<div class="shop-card__body--left">
-									<h4>Caffè Latte</h4>
-									<p>Lorem ipsum</p>
-								</div>
-								<div class="coffee-price">
-									<p>1<span>99</span></p>
-								</div>
+							<div class="coffee-price">
+								<p>1<span>99</span></p>
 							</div>
 						</div>
-						<div class="shop-card">
-							<div class="shop-card__img">
-								<img src="Images/3-01.png">
-							</div>
-							<div class="o-row o-row--justified shop-card__body">
-								<div class="shop-card__body--left">
-									<h4>White coffee</h4>
-									<p>Lorem ipsum</p>
-								</div>
-								<div class="coffee-price">
-									<p>1<span>99</span></p>
-								</div>
-							</div>
+					</div>
+					<div class="shop-card">
+						<div class="shop-card__img">
+							<img src="Images/4-01.png">
 						</div>
-						<div class="shop-card">
-							<div class="shop-card__img">
-								<img src="Images/4-01.png">
+						<div class="o-row o-row--justified shop-card__body">
+							<div class="shop-card__body--left">
+								<h4>Turkish coffee</h4>
+								<p>Lorem ipsum</p>
 							</div>
-							<div class="o-row o-row--justified shop-card__body">
-								<div class="shop-card__body--left">
-									<h4>Turkish coffee</h4>
-									<p>Lorem ipsum</p>
-								</div>
-								<div class="coffee-price">
-									<p>1<span>99</span></p>
-								</div>
+							<div class="coffee-price">
+								<p>1<span>99</span></p>
 							</div>
 						</div>
 					</div>
@@ -297,7 +281,7 @@
 						</div>
 					</div>
 					<div class="footer--middle">
-						<div class="o-row o-row--centered container social-media">
+						<div class="o-row o-row--centered o-wrapper o-wrapper--lg social-media">
 							<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook social-media__icon"></i></a>
 							<a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter social-media__icon"></i></a>
 							<a href="https://github.com/" target="_blank"><i class="fab fa-github social-media__icon"></i></a>
@@ -311,7 +295,7 @@
 							<p>All rights reserved.</p>
 						</div>
 						<div>
-							<ul class="o-list--bare o-list--inline o-list--aligned footer__links">
+							<ul class="o-list-bare o-list--inline o-list--right footer__links">
 								<li>
 									<a href="#">Privacy Policy</a>
 								</li>
@@ -329,7 +313,6 @@
 				<a onclick="topFunction()" href="#" class="back-to-top">
 					<i class="fas fa-chevron-up"></i>
 				</a>
-			</article>
 			</main>
         </div>
 		<script src="script.js"></script>
