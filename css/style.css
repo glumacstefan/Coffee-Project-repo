@@ -104,17 +104,8 @@ button:hover {
     justify-content: center;
 }
 
-.o-flag {
-    display: flex;
-    align-items: center;
-}
-
-.o-flag--vertical {
-    flex-direction: column;
-}
-
-.o-flag--reverse {
-    flex-direction: row-reverse;
+.o-row--aligned {
+    align-items: flex-end
 }
 
 .video-container {
@@ -428,10 +419,9 @@ header {
 }
 
 .footer {
-    position: relative; 
-    height: 100vh;
     width: 100%;
     text-shadow: none;
+    padding: 0;
 }
 
 .footer::before {
@@ -449,13 +439,13 @@ header {
     left: 0;
 }
 
-.footer__img--large {
+.footer__img {
     display: none;
 }
 
 .footer__wrapper {
     position: relative;
-    margin-top: 80px;
+    margin-top: 180px;
     padding: 0 30px;
 }
 
@@ -500,12 +490,13 @@ header {
 }
 
 .social-media {
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 25px;
+    text-align: center;
 }
 
 .social-media a:not(:first-child) {
-    margin-left: 15px;
+    margin-left: 14px;
 }
 
 .footer__copyright {
@@ -631,31 +622,32 @@ header {
 
 @media screen and (min-width: 769px) {
 
+    .o-flag {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .o-flag--reverse {
+        flex-direction: row-reverse;
+    }
+
+    .o-flag__img {
+        flex: 1;
+    }
+
+    .o-flag__body {
+        flex: 1;
+        height: 100%;
+    }
+
     .o-wrapper--lg {
         width: 80%;
         margin: auto;
     }
-    
-    .o-flag {
-        display: flex;
-        height: 100%;
-    }
-
-    .o-flag__img {
-        flex: 50%;
-    }
-
-    .o-flag__body {
-        flex: 50%;
-        height: 100%;
-    }
 
     .logo {
         margin-top: 10px;
-    }
-
-    .o-list--inline li {
-        display: inline;
     }
 
     .video-layer {
@@ -722,7 +714,6 @@ header {
     .consumption__img--large {
         display: block;
     }
-
 
     .coffee-history {
         padding: 0;
@@ -841,49 +832,70 @@ header {
         margin: 0 7px;
     }
 
-    .footer--top {
-        display: flex;
+    .footer::before {
+        background-image: none;
     }
 
-    .footer--bottom {
-        font-size: 10px;
+    .footer__wrapper {
+        padding: 0;
+        margin: 0;
     }
 
-    .social-media {
-        margin-top: 65px;
+    .footer__img {
+        display: block;
+        min-width: 750px;
+        max-width: 800px;
+        height: 800px;
+        margin-left: -160px;
+    }
+
+    .footer__img img {
+        width: 100%;
+        height: auto;
     }
 
     .newsletter {
         align-self: center;
-        transform: translateX(-10%);
-        width: 50%;
-        margin-right: 100px;
-        margin-left: 30px;
+        transform: translateX(-50%);
+        font-size: 14px;
+        max-width: 300px;
     }
 
-    .newsletter__form {
+    .newsletter__title {
+        font-size: 40px;
+    }
+
+    .form {
         text-align: end;
     }
 
-    .btn--narrower {
-        width: 40%;
+    .form__field {
+        padding: 10px;
+        font-size: 14px;
     }
 
-    .footer__copyright {
+    .footer--bottom {
         display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .footer__copyright {
+        margin: 0;
+        text-align: end;
+        line-height: 1.6;
+        align-self: flex-end;
     }
 
-    .footer__copyright p {
-        margin-left: 10px;
-    }
-
-    .footer__links li {
-        margin-left: 10px;
+    .footer__links {
+        margin: 0;
+        text-align: start;
     }
 
 }
 
 @media screen and (min-width: 1025px) {
+
     .consumption-card {
         font-size: 50px;
     }
@@ -891,6 +903,7 @@ header {
     .consumption-card span {
         font-size: 65px;
     }
+
     .timeline {
         width: 800px;
     }
@@ -902,21 +915,46 @@ header {
     }
 
     .footer__img {
-        max-width: 550px;
+        margin: 0;
     }
 
     .newsletter {
-        width: 30%;
-        margin-left: 150px;
+        transform: translateX(-30%);
     }
 
-    .social-media {
-        margin-top: 20px;
+    .footer--links {
+        margin: 0;
     }
+
+    .footer__copyright {
+        display: block;
+    }
+
 
 }
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+
+    .footer--bottom {
+        margin-top: 50px;
+    }
+
+    .footer__links {
+        display: flex;
+    }
+
+    .footer__link {
+        margin-left: 30px;
+    }
+
+    .footer__copyright {
+        display: flex;
+    }
+
+    .footer__copyright p {
+        margin-left: 30px;
+    }
+}
  
 
 
